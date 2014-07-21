@@ -5,15 +5,41 @@
     <link href="index.css" type="text/css" rel="stylesheet">
 </head>
 <body>
- <div class="header">
-    SwordFix Club
+ <div class="banner">
+    <div class="header">
+        SwordFix Club
+    </div>
  </div>
  <div class="content">
      Hi friends,<br>
      My name is Ravjot Singh.
  </div>
  <div class="index">
-     <a href="index.php">Home</a>
+	<ul>
+	<li> <a href="index.php" class="mylink">
+            <span>Home</span>
+        </a>
+    </li>
+    <li> <a href="" class="mylink">
+                <span> About Me </span>
+         </a>
+    </li>
+	<li class="dropdown">
+            <details>
+                <summary>
+                    <span> Articles </span>
+                </summary>
+                <p>
+                    <a href="" class="mylink"> Article1 </a> <br>
+                    <a href="" class="mylink"> Article1 </a> <br>
+                </p>
+            </details>
+    </li>
+	<li> <a href="" class="mylink">
+            <span> Queries </span>
+        </a>
+    </li>
+	</ul>
  </div>
 <?php
 /**
