@@ -30,8 +30,8 @@
                     <span> Articles </span>
                 </summary>
                 <p>
-                    <a href="" class="mylink"> Article1 </a> <br>
-                    <a href="" class="mylink"> Article1 </a> <br>
+                    <a href="src/article.php" class="mylink"> Article1 </a> <br>
+                    <a href="src/article.php" class="mylink"> Article1 </a> <br>
                 </p>
             </details>
     </li>
