@@ -1,0 +1,56 @@
+body
+{
+    background-image: url("images/retina_wood.png");
+}
+h1
+{
+    padding: 0;
+
+}
+
+.header
+{
+    margin-right: auto;
+    margin-left: auto;
+    width: 20%;
+    text-align: center;
+    font-size: 24pt;
+    font-family: cursive;
+    font-weight: bolder;
+    color: saddlebrown ;
+    #background-color: #7079db;
+    text-shadow:1px 1px beige;
+    #padding: 0;
+    margin-bottom: 10px;
+    clear: both;
+    border: 4px ridge white;
+    #opacity: 0.4;
+    #background-image: url("images/mochaGrunge.png");
+}
+.content
+{
+    padding: 0;
+    margin: 0;
+    width: 78%;
+    height: 600px;
+    #border: 2px solid black;
+    float: left;
+    background-image: url("images/mochaGrunge.png");
+    font-family: cursive;
+    color: white;
+}
+
+.index
+{
+    margin: 0;
+    width: 21%;
+    height: 600px;
+    border: 4px groove white;
+    float: right;
+    overflow-y: scroll;
+    #background-image: url("images/mochaGrunge.png");
+    font-weight: bolder;
+    color: saddlebrown ;
+    text-shadow:1px 1px beige;
+    #opacity: 0.4;
+}
