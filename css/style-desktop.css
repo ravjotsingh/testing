@@ -103,9 +103,11 @@ body
 
 #nav > ul > li > a:hover
 {
-    background-image: url("images/footer-content-wrapper-bg.jpg");
+    background-image: url("");
+    background-color: yellow;
     border-radius: 5px;
-    color: #FFF;
+    #color: #FFF;
+    color: darkred;
     opacity: 1;
 }
 
