@@ -2,28 +2,28 @@
  * Created by Ravjot on 21/08/14.
  */
 
-window.onload = load;
+//window.onload = load;
+document.observe("dom:loaded", load);
 
 function load()
 {
-    /*
-    var menu;
-    menu = document.getElementById("navlist").children;
-    alert(menu.length);
-    for(var i=0;i<menu.length;i++)
-    {
-        alert("poo");
-    }
-    */
-    /*
-    document.getElementById("aboutUs").onclick = lnk_aboutus();
-    document.getElementById("article").onclick = lnk_article();
-    document.getElementById("contactUs").onclick = lnk_guidance();
-    document.getElementById("logIn").onclick =lnk_login();
-    */
+    $("abtUs").observe("click", function(event){
+        aboutUs(event, this);
+    });
 
+    $("articles").observe("click", function(event){
+        articlesHandler(event, this);
+    });
+
+    $("contactUs").observe("click", function(event){
+        contactUs(event, this);
+    });
+
+    $("logIn").observe("click", function(event){
+        login(event, this);
+    });
 }
-
+/*
 function menu_inactive()
 {
     var menu;
@@ -34,20 +34,38 @@ function menu_inactive()
         menu[i].className ="inactive";
     }
 }
-function lnk_aboutus()
+*/
+function lnk_click(event, elem)
 {
+    var x = $(elem).up();
 
-}
-function lnk_article()
-{
+    var parN = $(x).nextSiblings();
+    for (var i = 0; i < parN.length; i++){
+        parN[i].addClassName("inactive");
+        parN[i].removeClassName("active");
+    }
 
+    var parP = $(x).previousSiblings();
+    for (var i = 0; i < parP.length; i++){
+        parP[i].addClassName("inactive");
+        parP[i].removeClassName("active");
+    }
+    x.removeClassName("inactive");
+    x.addClassName("active");
 }
-function lnk_guidance()
-{
 
+function aboutUs(event, elm){
+    lnk_click(event, elm);
 }
-function lnk_login()
-{
-    alert("login");
-    this.className ="li.active";
+
+function articlesHandler(event, elm){
+    lnk_click(event, elm);
+}
+
+function contactUs(event, elm){
+    lnk_click(event, elm);
+}
+
+function login(event, elm){
+    lnk_click(event, elm);
 }
